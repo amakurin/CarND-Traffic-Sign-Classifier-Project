@@ -67,7 +67,9 @@ Bar chart shows that number of samples significantly differs from label to label
 As a first step, I decided to convert the images to grayscale because rough analisis of samples shows that structure of image is way more informable that coloring. 
 
 Here is an example of a traffic sign image before and after grayscaling.
+
 ![alt text][image3]
+
 
 As a last step, I normalized the image data to get rid of big numbers hoping that it will increase learning accuracy and speed.
 
@@ -188,6 +190,7 @@ For the third image, the model shows some uncertainty about what is it so winner
 | .09					| No entry										|
 | .05					| No passing									|
 | .04					| Ahead only 									|
+
 My guess the reason is view angle. And i think this can be improve by adding perspective distortion to training data.
 
 For the forth image, the model is completely sure that this is a "Children crossing" sign (probability close to 1.0), and the image does contain a "Children crossing" sign. The top five soft max probabilities were
@@ -201,8 +204,6 @@ For the forth image, the model is completely sure that this is a "Children cross
 | 3e-11					| Dangerous curve to the left					|
 
 For the forth image, the model is completely sure that this is a "Keep right" sign (probability close to 1.0), and the image does contain a "Keep right" sign. The top five soft max probabilities were
-[38, 13, 14, 32, 25]
-
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
