@@ -32,8 +32,7 @@ The submission includes the my [project code](https://github.com/amakurin/CarND-
 
 ### Data Set Summary & Exploration
 
-#### 1. I used the numpy library to calculate summary statistics of the traffic
-signs data set (second code cell):
+#### 1. I used the numpy library to calculate summary statistics of the traffic signs data set (second code cell):
 
 * The size of training set is 34799
 * The size of test set is 12630
@@ -52,7 +51,7 @@ and bar chart of frequencies of labels to figure out dataset structure:
 
 Bar chart shows that number of samples significantly differs from label to label. I used this to improve accuracy later.
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
 ####1. The code for this step is contained in the fifth code cell of the IPython notebook.
 
