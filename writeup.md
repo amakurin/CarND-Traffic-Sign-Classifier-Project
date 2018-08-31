@@ -53,7 +53,7 @@ Bar chart shows that number of samples significantly differs from label to label
 
 ### Design and Test a Model Architecture
 
-####1. The code for this step is contained in the fifth code cell of the IPython notebook.
+#### 1. The code for this step is contained in the fifth code cell of the IPython notebook.
 
 As a first step, I decided to convert the images to grayscale because rough analisis of samples shows that structure of image is way more informable that coloring. 
 
@@ -64,7 +64,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 As a last step, I normalized the image data to get rid of big numbers hoping that it will increase learning accuracy and speed.
 
-####2. Provided dataset already included train, validation, and test data so i used it. Analisis of dataset structure shows huge difference in frequences for different labels. So when i stuckedon 89% accuracy i decided to generate additional samles for all labels with frequency less then mean. I implemented this by copying existing samples and adding distortions in rotation and scaling.
+#### 2. Provided dataset already included train, validation, and test data so i used it. Analisis of dataset structure shows huge difference in frequences for different labels. So when i stuckedon 89% accuracy i decided to generate additional samles for all labels with frequency less then mean. I implemented this by copying existing samples and adding distortions in rotation and scaling.
 
 I used uniformly distributed random values for:
 * angle [-10,10] degrees
@@ -79,7 +79,7 @@ To cross validate my model, iused validation set included inprovided data.
 My final training set had 51448 number of images. My validation set and test set had 4410 and 12630 number of images.
 
 
-####3. The code for my final model is located in the sixth cell of the ipython notebook. 
+#### 3. The code for my final model is located in the sixth cell of the ipython notebook. 
 
 My final model consisted of the following layers:
 
@@ -105,14 +105,14 @@ My final model consisted of the following layers:
 Additional layer of softmax cross entropy used to calculate loss.
 
 
-####4. The code for training the model is located in the seventh cell of the ipython notebook. 
+#### 4. The code for training the model is located in the seventh cell of the ipython notebook. 
 
 To train the model, I used default lenet hyperparameters:
 * learning rate 0.001
 * number of epochs 10
 * batch size 128
 
-####5. The code for calculating the accuracy of the model is located in the seventh and eight cells of the Ipython notebook.
+#### 5. The code for calculating the accuracy of the model is located in the seventh and eight cells of the Ipython notebook.
 
 My final model results were:
 * validation set accuracy of 0.975 
@@ -123,16 +123,16 @@ Grayscaling and normalization gave 89%.
 Sample generation gave 92%.
 Then i noticed that learning process don't have enough progress: EPOCH1 80%, EPOCH10 92%. I thought that maybe my model is not capacious enough. I doubled features for both convolutional layers, added one classification layer and dropout hoping that it speed up learning and increase robustness. This gave 97.5% accuracy on validation set, and 94% on test set - final result. This step didn't change learning rate mush, but gave more accuracy.
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. I downloaded five images using goggle picture search "German traffic signs":
+#### 1. I downloaded five images using goggle picture search "German traffic signs":
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
 All images have some watermarks on it, "No entry" and "Keep right" have custom view angle that could be a problem during classification.
 
-####2. The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+#### 2. The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
@@ -147,7 +147,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 94% taking an account small number (5) of experiments.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code plotting softmax probabilities is located in the 12th cell of the Ipython notebook.
 
