@@ -1,4 +1,4 @@
-**Traffic Sign Recognition** 
+## **Traffic Sign Recognition** 
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -24,15 +24,15 @@ The goals / steps of this project are the following:
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+### Writeup / README
 
-####1. With this project i've reached about 97% acuracy on validation dataset and about 94% on test dataset. 5 images found on web wereclassified with 80% accuracy (4 of 5).
+#### 1. With this project i've reached about 97% acuracy on validation dataset and about 94% on test dataset. 5 images found on web wereclassified with 80% accuracy (4 of 5).
 I started with lenet architecture wich gave about 87%. Then i implemented preprocessing (grayscaling and local normalization) wich lift up accuracy to  about 89%. Then i tried to go wide with classification weights with no luck. Then idecided to increase number of features and go little deep: i doubled number of features on both convolutional layers and added one partially connectected classification level, which gave the final result. I hadn't ability to train nn on GPU, so i used my laptop (CPU:Intel T6600 2.2GHz, RAM:4Gb), so learning cycle took about 30 minutes. 
 The submission includes the my [project code](https://github.com/amakurin/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. I used the numpy library to calculate summary statistics of the traffic
+#### 1. I used the numpy library to calculate summary statistics of the traffic
 signs data set (second code cell):
 
 * The size of training set is 34799
@@ -40,7 +40,7 @@ signs data set (second code cell):
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. I used numpy and matplotlib to obtain exploratory visualization of the data set.
+#### 2. I used numpy and matplotlib to obtain exploratory visualization of the data set.
 The code for this step is contained in the third code cell of the IPython notebook. 
 
 Here is an exploratory visualization of the data set. 
